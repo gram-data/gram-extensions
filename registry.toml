@@ -1,0 +1,14 @@
+# Registry of extensions for the `gram` CLI.
+#
+# `gram extension list` and `gram extension install` fetch this file from
+# https://raw.githubusercontent.com/gram-data/gram-extensions/main/registry.toml
+# (override with the GRAM_REGISTRY_URL environment variable).
+#
+# Each entry names a GitHub repository that publishes release artifacts named
+# `<bin>-<target-triple>.<tar.gz|zip>`. See README.md.
+
+[[extension]]
+name = "lsp"
+description = "Language server protocol support"
+github = "gram-data/tree-sitter-gram"
+bin = "gram-lsp"
