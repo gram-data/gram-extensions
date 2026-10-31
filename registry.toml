@@ -12,3 +12,9 @@ name = "lsp"
 description = "Language server protocol support"
 github = "gram-data/tree-sitter-gram"
 bin = "gram-lsp"
+
+[[extension]]
+name = "ontology"
+description = "Check and export *.ontology.gram files"
+github = "gram-data/gram-ontology"
+bin = "gram-ontology"
