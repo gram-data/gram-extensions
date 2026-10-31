@@ -18,7 +18,7 @@ An extension is installed from the GitHub Releases of `github`. Release artifact
 
 ## Versions
 
-[`versions.toml`](versions.toml) records the latest release of every entry, so the CLI can show available versions with one request instead of one GitHub API call per extension. It is generated, not edited: the [Update versions](.github/workflows/versions.yml) workflow runs daily, on demand, and whenever `registry.toml` changes, and commits only when a version changed. `updated_at` is the time of the last change. An entry whose release the workflow cannot read, such as one in a private repository, keeps its previous version.
+[`versions.toml`](versions.toml) records the latest release of every entry, so the CLI can show available versions with one request instead of one GitHub API call per extension. It is generated, not edited: the [Update versions](.github/workflows/versions.yml) workflow runs hourly, on demand, and whenever `registry.toml` changes, and commits only when a version changed. `updated_at` is the time of the last change. An entry whose release the workflow cannot read, such as one in a private repository, keeps its previous version.
 
 ## Adding an extension
 
