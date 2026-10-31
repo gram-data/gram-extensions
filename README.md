@@ -16,6 +16,10 @@ bin = "gram-lsp"                                # base binary name, no platform 
 
 An extension is installed from the GitHub Releases of `github`. Release artifacts must be named `<bin>-<target-triple>.<ext>` (`tar.gz`, or `zip` on Windows) for the targets the CLI supports. The full contract is in tree-sitter-gram's [`specs/007-unified-gram-cli/contracts/extension-registry.md`](https://github.com/gram-data/tree-sitter-gram/blob/main/specs/007-unified-gram-cli/contracts/extension-registry.md).
 
+## Versions
+
+[`versions.toml`](versions.toml) records the latest release of every entry, so the CLI can show available versions with one request instead of one GitHub API call per extension. It is generated, not edited: the [Update versions](.github/workflows/versions.yml) workflow runs daily, on demand, and whenever `registry.toml` changes, and commits only when a version changed. `updated_at` is the time of the last change. An entry whose release the workflow cannot read, such as one in a private repository, keeps its previous version.
+
 ## Adding an extension
 
 Open a pull request that adds an `[[extension]]` entry. The extension's repository should already have a release with artifacts following the naming convention above.
